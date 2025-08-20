@@ -1,0 +1,26 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "mcp-auto-researcher"
+version = "0.2.0"
+description = "Minimal FastMCP 2.0 server with sample tools for Cursor"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [{name = "Your Name"}]
+dependencies = [
+  "fastmcp>=2.11.0",
+  "httpx>=0.28.0",
+  "beautifulsoup4>=4.12.0",
+  "matplotlib>=3.8.0",
+  "reportlab>=4.0.0",
+]
+
+[tool.hatch.build]
+include = ["mcp_auto_researcher"]
+
+[project.scripts]
+mcp-auto-researcher = "mcp_auto_researcher.server:main"
+
